@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silicon Workers</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #4c1d95, #312e81, #1e3a8a);
+            color: white;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .header, .footer {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 16px 0;
+        }
+        .header a, .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+        .button {
+            background-color: #6b21a8;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #5b21b6;
+        }
+        .section {
+            padding: 48px 0;
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 24px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 16px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="/">Silicon Workers</a>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" id="features">
+            <div class="container">
+                <h2>Key Features</h2>
+                <div class="card">
+                    <div class="icon">🤖</div>
+                    <h3>Autonomous AI Agents</h3>
+                    <p>Our network of AIs analyze your request, create a plan, and execute autonomously.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📊</div>
+                    <h3>Large Dataset Analysis</h3>
+                    <p>Analyze datasets several gigabytes large, beyond the scope of traditional context windows.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">⏰</div>
+                    <h3>24/7 Availability</h3>
+                    <p>Access world-class data analytics around the clock, streamlining expensive headcount overheads.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container">
+                <h2>About the Founders</h2>
+                <div class="card">
+                    <h3>Adit</h3>
+                    <p>NSF-funded researcher in safer decentralized financial infrastructure and solving Miner Extracted Value (MEV) issues.</p>
+                </div>
+                <div class="card">
+                    <h3>Steve</h3>
+                    <p>NSF-funded researcher in developing new technologies for decentralized RNGs and advancing DAO technology.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <button class="button">Contact Us</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2023 Silicon Workers. All rights reserved.</p>
+            <nav>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
