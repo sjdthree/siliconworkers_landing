@@ -16,15 +16,23 @@
             margin: 0 auto;
             padding: 0 16px;
         }
-        .header, .footer {
+        .header {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             padding: 16px 0;
+            text-align: center;
         }
-        .header a, .footer a {
+        .header a {
             color: white;
             text-decoration: none;
             margin: 0 8px;
+            font-size: 1.2rem;
+        }
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0;
+            padding: 16px 0;
         }
         .button {
             background-color: #6b21a8;
@@ -59,18 +67,32 @@
             font-size: 3rem;
             margin-bottom: 16px;
         }
+        .footer {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 16px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href="/">Silicon Workers</a>
-            <nav>
-                <a href="#features">Features</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
+        <h1 class="title">Silicon Workers</h1>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
     <main>
@@ -112,7 +134,9 @@
         <section class="section" id="contact">
             <div class="container">
                 <h2>Contact Us</h2>
-                <button class="button">Contact Us</button>
+                <div class="button-container">
+                    <button class="button">Contact Us</button>
+                </div>
             </div>
         </section>
     </main>
