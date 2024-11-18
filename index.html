@@ -1,165 +1,581 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+	Photon by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
     <title>Silicon Workers</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom right, #4c1d95, #312e81, #1e3a8a);
-            color: white;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
-        .header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 16px 0;
-            text-align: center;
-        }
-        .header a {
-            color: white;
-            text-decoration: none;
-            margin: 0 8px;
-            font-size: 1.2rem;
-        }
-        .title {
-            font-size: 3rem;
-            font-weight: bold;
-            margin: 0;
-            padding: 16px 0;
-        }
-        .button {
-            background-color: #6b21a8;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #5b21b6;
-        }
-        .section {
-            padding: 48px 0;
-        }
-        .section h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 24px;
-        }
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 16px;
-            border-radius: 8px;
-            transition: transform 0.3s;
-            text-align: center;
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        .icon {
-            font-size: 3rem;
-            margin-bottom: 16px;
-        }
-        .footer {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 16px 0;
-            text-align: center;
-        }
-        .footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 8px;
-        }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      /* Add a squarcle style */
+      .squarcle {
+        width: 150px; /* Adjust size as needed */
+        height: 150px; /* Ensure it's square */
+        border-radius: 25%; /* Creates the squarcle effect */
+        border: 5px solid #333; /* Add a border (color and size can be customized) */
+        overflow: hidden; /* Ensures the image stays within the rounded corners */
+        display: block;
+        margin: 0 auto; /* Centers the image */
+      }
+      .blackborder {
+        border-radius: 25%; /* Creates the squarcle effect */
+        border: 5px solid #333; /* Add a border (color and size can be customized) */
+        overflow: hidden; /* Ensures the image stays within the rounded corners */
+        display: block;
+        margin: 0 auto; /* Centers the image */
+      }
     </style>
-</head>
-<body>
-    <header class="header">
-        <h1 class="title">Silicon Workers</h1>
-        <nav>
-            <a href="#features">Features</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <section id="header">
+      <div class="inner">
+        <img
+          src="/images/logo.jpg"
+          alt="Silicon Workers Logo"
+          class="squarcle"
+        />
+        <h1><strong>Silicon Workers</strong><br /></h1>
+        <p>
+          Powerful, Autonomous workers powered by an agentic AI network.<br />
+          Outsource all your work with a single email.
+        </p>
+        <h1>
+          Test out our
+          <a href="try_it.html">Data Scientist</a>
+          MVP.
+        </h1>
+        <ul class="actions special">
+          <li><a href="#one" class="button scrolly">Discover</a></li>
+        </ul>
+      </div>
+    </section>
 
-    <main>
-        <section class="section" id="features">
-            <div class="container">
-                <h2>Key Features</h2>
-                <div class="card">
-                    <div class="icon">🤖</div>
-                    <h3>Autonomous AI Agents</h3>
-                    <p>Our network of AIs analyze your request, create a plan, and execute autonomously.</p>
-                </div>
-                <div class="card">
-                    <div class="icon">📊</div>
-                    <h3>Large Dataset Analysis</h3>
-                    <p>Analyze datasets several gigabytes large, beyond the scope of traditional context windows.</p>
-                </div>
-                <div class="card">
-                    <div class="icon">⏰</div>
-                    <h3>24/7 Availability</h3>
-                    <p>Access world-class data analytics around the clock, streamlining expensive headcount overheads.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="about">
-            <div class="container">
-                <h2>About the Founders</h2>
-                <div class="card">
-                    <h3>Adit</h3>
-                    <p>NSF-funded researcher in safer decentralized financial infrastructure and solving Miner Extracted Value (MEV) issues.</p>
-                </div>
-                <div class="card">
-                    <h3>Steve</h3>
-                    <p>NSF-funded researcher in developing new technologies for decentralized RNGs and advancing DAO technology.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="contact">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <div class="button-container">
-                    <button class="button">Contact Us</button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>© 2023 Silicon Workers. All rights reserved.</p>
-            <nav>
-                <a href="#">Terms of Service</a>
-                <a href="#">Privacy</a>
-            </nav>
+    <!-- One -->
+    <section id="one" class="main style1">
+      <div class="container">
+        <div class="row gtr-150">
+          <div class="col-6 col-12-medium">
+            <header class="major">
+              <h2>
+                Silicon Workers <strong>autonomously</strong><br />
+                handle all of your complicated, druggerous work tasks.
+              </h2>
+            </header>
+            <p>
+              Treat our silicon workers exactly the same as you would any remote
+              employee. Simply shoot off an email with your work tasks, and our
+              silicon data scientist will quickly tackle your work and email you
+              back as soon as it's done. No more bug fixing, summarizing, or
+              data cleaning needed.
+            </p>
+          </div>
+          <div class="col-6 col-12-medium imp-medium">
+            <span class="image fit"
+              ><img
+                src="images/email_example.png"
+                alt="An example of an email being sent"
+                class="bigsquarcle"
+            /></span>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script>
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 50) {
-                header.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-            } else {
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-            }
-        });
-    </script>
-</body>
+    <!-- Two -->
+    <section id="two" class="main style2">
+      <div class="container">
+        <div class="row gtr-150">
+          <div class="col-6 col-12-medium">
+            <ul class="major-icons">
+              <li><span class="icon solid style1 major fa-code"></span></li>
+              <li><span class="icon solid style2 major fa-bolt"></span></li>
+              <li>
+                <span class="icon solid style3 major fa-camera-retro"></span>
+              </li>
+              <li><span class="icon solid style4 major fa-cog"></span></li>
+              <li><span class="icon solid style5 major fa-desktop"></span></li>
+              <li><span class="icon solid style6 major fa-calendar"></span></li>
+            </ul>
+          </div>
+          <div class="col-6 col-12-medium">
+            <header class="major">
+              <h2>
+                Our powerful agentic network<br />
+                makes quick work of the tedious.
+              </h2>
+            </header>
+            <p>
+              Our technology revolutionizes data analysis workflows with a
+              user-centric approach, offering a seamless experience for data
+              scientists and analysts. At its core is a network of autonomous AI
+              agents that take on data science tasks from start to
+              finish—cleaning, modeling, and generating insights.
+            </p>
+            <p>
+              Using our product requires no setup or technical expertise to get
+              started. Simply treat our Silicon Data Scientist the same as you
+              would any other employee. Just send off an email with your task an
+              data attached. Our powerful agentic network will intake your data,
+              automatically craft an analysis plan, execute against it
+              autonomously, and reach back out once it has your results.
+            </p>
+            <p>
+              We built the product to solve our own data challenges, and our
+              focus on usability shines through. The system is designed to
+              integrate smoothly into existing workflows, empowering teams to
+              explore new insights and tackle larger datasets with ease. Whether
+              you're an expert analyst or a business user, the platform delivers
+              fast, reliable outcomes with a level of simplicity that makes AI
+              truly accessible.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three -->
+    <section id="three" class="main style1 special">
+      <div class="container">
+        <header class="major">
+          <h2>Powerful Flexibility</h2>
+        </header>
+        <p>
+          Our silicon workers can handle most data tasks from cleaning data sets
+          to neural nets to financial forecasting.
+        </p>
+        <div class="row gtr-150">
+          <div class="col-4 col-12-medium">
+            <span class="image fit"
+              ><img
+                src="images/data_cleaning_email.png"
+                alt=""
+                class="blackborder"
+            /></span>
+            <h3>Data Cleaning</h3>
+            <p>
+              Effortlessly streamline your data cleaning process with autonomous
+              AI agents that identify, correct, and prepare your datasets for
+              analysis—saving hours of tedious work.
+            </p>
+          </div>
+          <div class="col-4 col-12-medium">
+            <span class="image fit"
+              ><img src="images/forecasting.png" alt="" class="blackborder"
+            /></span>
+            <h3>Financial Forecasting</h3>
+            <p>
+              Enhance your financial forecasting with AI agents that analyze
+              trends, build predictive models, and deliver actionable
+              insights—quickly and with precision.
+            </p>
+            <ul class="actions special">
+              <li>
+                <a href="kaggle_detail.html" class="button"
+                  >Deep Dive Into the Details</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-4 col-12-medium">
+            <span class="image fit"
+              ><img src="images/forecasting.png" alt="" class="blackborder"
+            /></span>
+            <h3>Powerful Predictions</h3>
+            <p>
+              Our AI can autonomously build powerful predictive models, making
+              elite data science accessible to everyone.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Four -->
+    <section id="four" class="main style1 special">
+      <div class="container">
+        <header class="major">
+          <h2>Impressed yet?</h2>
+        </header>
+        <p>Let us handle your data task automatically.</p>
+        <ul class="actions special">
+          <li>
+            <a href="try_it.html" class="button wide primary">Try it out!</a>
+          </li>
+          <li><a href="#" class="button wide">About Us</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Five -->
+    <!--
+			<section id="five" class="main style1">
+				<div class="container">
+					<header class="major special">
+						<h2>Elements</h2>
+					</header>
+
+					<section>
+						<h4>Text</h4>
+						<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+						This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+						This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+						<hr />
+						<header>
+							<h4>Heading with a Subtitle</h4>
+							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+						</header>
+						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+						<header>
+							<h5>Heading with a Subtitle</h5>
+							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+						</header>
+						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+						<hr />
+						<h2>Heading Level 2</h2>
+						<h3>Heading Level 3</h3>
+						<h4>Heading Level 4</h4>
+						<h5>Heading Level 5</h5>
+						<h6>Heading Level 6</h6>
+						<hr />
+						<h5>Blockquote</h5>
+						<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+						<h5>Preformatted</h5>
+						<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+					</section>
+
+					<section>
+						<h4>Lists</h4>
+						<div class="row">
+							<div class="col-6 col-12-medium">
+								<h5>Unordered</h5>
+								<ul>
+									<li>Dolor pulvinar etiam.</li>
+									<li>Sagittis adipiscing.</li>
+									<li>Felis enim feugiat.</li>
+								</ul>
+								<h5>Alternate</h5>
+								<ul class="alt">
+									<li>Dolor pulvinar etiam.</li>
+									<li>Sagittis adipiscing.</li>
+									<li>Felis enim feugiat.</li>
+								</ul>
+							</div>
+							<div class="col-6 col-12-medium">
+								<h5>Ordered</h5>
+								<ol>
+									<li>Dolor pulvinar etiam.</li>
+									<li>Etiam vel felis viverra.</li>
+									<li>Felis enim feugiat.</li>
+									<li>Dolor pulvinar etiam.</li>
+									<li>Etiam vel felis lorem.</li>
+									<li>Felis enim et feugiat.</li>
+								</ol>
+								<h5>Icons</h5>
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<h5>Actions</h5>
+						<div class="row">
+							<div class="col-6 col-12-medium">
+								<ul class="actions">
+									<li><a href="#" class="button primary">Default</a></li>
+									<li><a href="#" class="button">Default</a></li>
+								</ul>
+								<ul class="actions small">
+									<li><a href="#" class="button primary small">Small</a></li>
+									<li><a href="#" class="button small">Small</a></li>
+								</ul>
+								<ul class="actions stacked">
+									<li><a href="#" class="button primary">Default</a></li>
+									<li><a href="#" class="button">Default</a></li>
+								</ul>
+								<ul class="actions stacked">
+									<li><a href="#" class="button primary small">Small</a></li>
+									<li><a href="#" class="button small">Small</a></li>
+								</ul>
+							</div>
+							<div class="col-6 col-12-medium">
+								<ul class="actions stacked">
+									<li><a href="#" class="button primary fit">Default</a></li>
+									<li><a href="#" class="button fit">Default</a></li>
+								</ul>
+								<ul class="actions stacked">
+									<li><a href="#" class="button primary small fit">Small</a></li>
+									<li><a href="#" class="button small fit">Small</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h4>Table</h4>
+						<h5>Default</h5>
+						<div class="table-wrapper">
+							<table>
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Description</th>
+										<th>Price</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Item One</td>
+										<td>Ante turpis integer aliquet porttitor.</td>
+										<td>29.99</td>
+									</tr>
+									<tr>
+										<td>Item Two</td>
+										<td>Vis ac commodo adipiscing arcu aliquet.</td>
+										<td>19.99</td>
+									</tr>
+									<tr>
+										<td>Item Three</td>
+										<td> Morbi faucibus arcu accumsan lorem.</td>
+										<td>29.99</td>
+									</tr>
+									<tr>
+										<td>Item Four</td>
+										<td>Vitae integer tempus condimentum.</td>
+										<td>19.99</td>
+									</tr>
+									<tr>
+										<td>Item Five</td>
+										<td>Ante turpis integer aliquet porttitor.</td>
+										<td>29.99</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td colspan="2"></td>
+										<td>100.00</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+
+						<h5>Alternate</h5>
+						<div class="table-wrapper">
+							<table class="alt">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Description</th>
+										<th>Price</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Item One</td>
+										<td>Ante turpis integer aliquet porttitor.</td>
+										<td>29.99</td>
+									</tr>
+									<tr>
+										<td>Item Two</td>
+										<td>Vis ac commodo adipiscing arcu aliquet.</td>
+										<td>19.99</td>
+									</tr>
+									<tr>
+										<td>Item Three</td>
+										<td> Morbi faucibus arcu accumsan lorem.</td>
+										<td>29.99</td>
+									</tr>
+									<tr>
+										<td>Item Four</td>
+										<td>Vitae integer tempus condimentum.</td>
+										<td>19.99</td>
+									</tr>
+									<tr>
+										<td>Item Five</td>
+										<td>Ante turpis integer aliquet porttitor.</td>
+										<td>29.99</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td colspan="2"></td>
+										<td>100.00</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</section>
+
+					<section>
+						<h4>Buttons</h4>
+						<ul class="actions">
+							<li><a href="#" class="button primary">Primary</a></li>
+							<li><a href="#" class="button">Default</a></li>
+						</ul>
+						<ul class="actions">
+							<li><a href="#" class="button large">Large</a></li>
+							<li><a href="#" class="button">Default</a></li>
+							<li><a href="#" class="button small">Small</a></li>
+						</ul>
+						<ul class="actions fit">
+							<li><a href="#" class="button fit">Fit</a></li>
+							<li><a href="#" class="button primary fit">Fit</a></li>
+							<li><a href="#" class="button fit">Fit</a></li>
+						</ul>
+						<ul class="actions fit small">
+							<li><a href="#" class="button primary fit small">Fit + Small</a></li>
+							<li><a href="#" class="button fit small">Fit + Small</a></li>
+							<li><a href="#" class="button primary fit small">Fit + Small</a></li>
+						</ul>
+						<ul class="actions">
+							<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+							<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+						</ul>
+						<ul class="actions">
+							<li><span class="button primary disabled">Disabled</span></li>
+							<li><span class="button disabled">Disabled</span></li>
+						</ul>
+					</section>
+
+					<section>
+						<h4>Form</h4>
+						<form method="post" action="#">
+							<div class="row gtr-uniform gtr-50">
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+								</div>
+								<div class="col-12">
+									<select name="demo-category" id="demo-category">
+										<option value="">- Category -</option>
+										<option value="1">Manufacturing</option>
+										<option value="1">Shipping</option>
+										<option value="1">Administration</option>
+										<option value="1">Human Resources</option>
+									</select>
+								</div>
+								<div class="col-4 col-12-small">
+									<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+									<label for="demo-priority-low">Low</label>
+								</div>
+								<div class="col-4 col-12-small">
+									<input type="radio" id="demo-priority-normal" name="demo-priority">
+									<label for="demo-priority-normal">Normal</label>
+								</div>
+								<div class="col-4 col-12-small">
+									<input type="radio" id="demo-priority-high" name="demo-priority">
+									<label for="demo-priority-high">High</label>
+								</div>
+								<div class="col-6 col-12-small">
+									<input type="checkbox" id="demo-copy" name="demo-copy">
+									<label for="demo-copy">Email me a copy</label>
+								</div>
+								<div class="col-6 col-12-small">
+									<input type="checkbox" id="demo-human" name="demo-human" checked>
+									<label for="demo-human">Not a robot</label>
+								</div>
+								<div class="col-12">
+									<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+								</div>
+								<div class="col-12">
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</section>
+
+					<section>
+						<h4>Image</h4>
+						<h5>Fit</h5>
+						<div class="box alt">
+							<div class="row gtr-uniform gtr-50">
+								<div class="col-12"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+							</div>
+						</div>
+						<h5>Left &amp; Right</h5>
+						<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						<p><span class="image right"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+					</section>
+
+				</div>
+			</section>
+		-->
+
+    <!-- Footer -->
+    <section id="footer">
+      <ul class="icons">
+        <li>
+          <a href="#" class="icon brands alt fa-twitter"
+            ><span class="label">Twitter</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="icon brands alt fa-facebook-f"
+            ><span class="label">Facebook</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="icon brands alt fa-instagram"
+            ><span class="label">Instagram</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="icon brands alt fa-github"
+            ><span class="label">GitHub</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="icon solid alt fa-envelope"
+            ><span class="label">Email</span></a
+          >
+        </li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; Untitled</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
