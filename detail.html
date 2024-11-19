@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<!--
+	Photon by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Silicon Workers</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+    <style>
+      /* Add a squarcle style */
+      .squarcle {
+        width: 150px; /* Adjust size as needed */
+        height: 150px; /* Ensure it's square */
+        border-radius: 25%; /* Creates the squarcle effect */
+        border: 5px solid #333; /* Add a border (color and size can be customized) */
+        overflow: hidden; /* Ensures the image stays within the rounded corners */
+        display: block;
+        margin: 0 auto; /* Centers the image */
+      }
+      .bigsquarcle {
+        width: 560px; /* Adjust size as needed */
+        height: 350px; /* Ensure it's square */
+        border-radius: 25%; /* Creates the squarcle effect */
+        border: 5px solid #333; /* Add a border (color and size can be customized) */
+        overflow: hidden; /* Ensures the image stays within the rounded corners */
+        display: block;
+        margin: 0 auto; /* Centers the image */
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <!-- One -->
+    <section id="one" class="main style1">
+      <div class="container">
+        <div class="row gtr-150">
+          <div class="col-6 col-12-medium">
+            <header class="major">
+              <h2>
+                Flexibility powerful enough to
+                <strong>Autonomusly</strong> address your data science needs.
+              </h2>
+            </header>
+            <p>
+              Our Silicon Data Scientist easily handles even complex workflows.
+              The agentic AI network automatically generates a plan, executes,
+              and responds in just 5 minutes. No bug-squashing, data cleaning,
+              or handholding required. Here's an example looking at student test
+              scores.
+            </p>
+          </div>
+          <div class="col-6 col-12-medium imp-medium">
+            <span class="image fit"
+              ><img
+                src="images/detail_dataset.png"
+                alt="Dataset of student grades"
+                class="bigsquarcle"
+            /></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three -->
+    <section id="three" class="main style2 special">
+      <div class="container">
+        <header class="major">
+          <h2>Powerful Simplicity</h2>
+        </header>
+        <div class="row gtr-150">
+          <div class="col-6 col-12-medium">
+            <span class="image fit"
+              ><img src="images/detail_request.png" alt="" class="bigsquarcle"
+            /></span>
+            <h3>Send an Email</h3>
+            <p>
+              All a user has to do is explain their request in plain english and
+              attach the data they provide into an email. Here we're asking the
+              system to parse
+              <a
+                href="https://www.kaggle.com/datasets/satayjit/student-performance-bd?select=bd_students_per.csv"
+                >open-source student performance</a
+              >.
+            </p>
+          </div>
+          <div class="col-6 col-12-medium">
+            <span class="image fit">
+              <img src="images/detail_result.png" alt="" class="bigsquarcle" />
+            </span>
+            <h3>Automated Data Science</h3>
+            <p>
+              Here it's provided some insight into the main variables that
+              impact student test-scores and made some recommendations.
+            </p>
+            <!-- Button to open the modal -->
+            <button id="openModalButton" class="button">
+              See the Full Response
+            </button>
+          </div>
+
+          <!-- Modal Structure -->
+          <div id="infoModal" class="modal">
+            <div class="modal-content">
+              <span id="closeModalButton" class="close">&times;</span>
+              <div class="analysis-summary">
+                <h2>
+                  Summary of Findings on Drivers Impacting Student Test Scores
+                </h2>
+                <p>
+                  Based on the analysis conducted on the dataset, we aimed to
+                  determine the primary variables and drivers that influence
+                  student performance in various subjects including English,
+                  Math, Science, Social Science, and Art Culture. The results of
+                  the analysis are stored in a CSV file that outlines feature
+                  importance derived from a Random Forest regression model.
+                </p>
+
+                <h3>Key Findings</h3>
+                <h4>Top Variables Influencing Scores:</h4>
+                <ul>
+                  <li>
+                    <strong
+                      >Student Group in Arts
+                      (<code>stu_group_arts</code>)</strong
+                    >: This feature has the highest importance score of
+                    <strong>0.575</strong>. This suggests that students grouped
+                    in the arts curriculum perform significantly better across
+                    various subjects compared to others.
+                  </li>
+                  <li>
+                    <strong
+                      >Student Group in Science
+                      (<code>stu_group_science</code>)</strong
+                    >: With an importance score of <strong>0.158</strong>, this
+                    variable is also a notable driver of higher test scores,
+                    indicating that students in science groups are positively
+                    correlated with higher performance.
+                  </li>
+                  <li>
+                    <strong>Student ID (<code>id</code>)</strong>: Surprisingly,
+                    this variable has low predictive value (importance of
+                    <strong>0.033</strong>), suggesting it doesn’t significantly
+                    influence student performance.
+                  </li>
+                  <li>
+                    <strong>Attendance</strong>: Attendance has a modest impact
+                    (importance of <strong>0.022</strong>), implying that
+                    regular presence in class may contribute to better academic
+                    results.
+                  </li>
+                  <li>
+                    <strong>Study Time</strong>: The importance score for study
+                    time is <strong>0.013</strong>, indicating that while it has
+                    some impact, it may not be the most critical driver for
+                    performance.
+                  </li>
+                  <li>
+                    <strong>Family Size and Age</strong>: These features show
+                    lower importance scores (<strong>0.011</strong> and
+                    <strong>0.008</strong>, respectively), suggesting they play
+                    a minor role compared to educational grouping and
+                    attendance.
+                  </li>
+                  <li>
+                    <strong>Mother's Job Status</strong>: A marginal influence
+                    of <strong>0.004</strong> indicates that this variable might
+                    not significantly affect student scores.
+                  </li>
+                </ul>
+
+                <h3>Insights and Trends</h3>
+                <p>
+                  The data strongly suggests that student grouping (arts and
+                  science) is a central factor in determining academic success,
+                  emphasizing the importance of a well-structured curriculum
+                  that aligns with students' performance. While attendance and
+                  study time show some positive correlation with scores, their
+                  lower importance implies that other factors, particularly
+                  educational grouping, overshadow them. Demographic factors
+                  like family size and age appear to have minimal influence,
+                  which may indicate that academic environment and engagement
+                  play a more crucial role in student outcomes.
+                </p>
+
+                <h3>Recommendations for the User</h3>
+                <ul>
+                  <li>
+                    <strong>Focus on Educational Groupings:</strong> If you aim
+                    to improve student outcomes, consider enhancing resources
+                    and support within arts and science groupings.
+                  </li>
+                  <li>
+                    <strong>Monitor Attendance:</strong> Since attendance has a
+                    recognizable impact, interventions to promote consistent
+                    classroom attendance could be beneficial.
+                  </li>
+                  <li>
+                    <strong>Consider Additional Factors:</strong> Explore
+                    qualitative aspects such as student motivation and
+                    engagement that might not be fully captured by the
+                    quantitative data.
+                  </li>
+                </ul>
+
+                <h3>Usage of Results</h3>
+                <p>
+                  The findings are encapsulated in a file named
+                  <code>feature_importance.csv</code>, which can be found in the
+                  'results' folder. This file details the importance of each
+                  feature assessed in the model. Further advancements could
+                  include using the trained Random Forest model, available as
+                  <code>random_forest_model.pkl</code>, for predictive analyses
+                  related to student scores across different educational
+                  initiatives.
+                </p>
+                <p>
+                  If you wish to delve deeper into these findings or make
+                  data-driven decisions, you can review these files or consult
+                  with data professionals who can help interpret the model's
+                  results in practical terms.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Four -->
+    <section id="four" class="main style2 special">
+      <div class="container">
+        <header class="major">
+          <h2>Ready to try out your own Silicon Data Scientist?</h2>
+        </header>
+        <p>Let us handle your data task automatically.</p>
+        <ul class="actions special">
+          <li>
+            <a href="try_it.html" class="button wide primary">Try it out!</a>
+          </li>
+          <li><a href="#" class="button wide">About Us</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="footer">
+      <ul class="icons">
+        <li>
+          <a href="#" class="icon brands alt fa-twitter"
+            ><span class="label">Twitter</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="icon brands alt fa-facebook-f"
+            ><span class="label">Facebook</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="icon brands alt fa-instagram"
+            ><span class="label">Instagram</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="icon brands alt fa-github"
+            ><span class="label">GitHub</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="icon solid alt fa-envelope"
+            ><span class="label">Email</span></a
+          >
+        </li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; Silicon Workers</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .modal-content {
+        background-color: rgb(36, 36, 36);
+        margin: 15% auto;
+        padding: 20px;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 1000px;
+        text-align: left;
+      }
+
+      .modal-content h2 {
+        text-align: center; /* Center only the h2 heading */
+        margin-bottom: 20px; /* Add spacing below the heading for better layout */
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+      }
+    </style>
+
+    <!-- Script -->
+    <script>
+      document.getElementById("openModalButton").onclick = function () {
+        document.getElementById("infoModal").style.display = "block";
+      };
+
+      document.getElementById("closeModalButton").onclick = function () {
+        document.getElementById("infoModal").style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target === document.getElementById("infoModal")) {
+          document.getElementById("infoModal").style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
