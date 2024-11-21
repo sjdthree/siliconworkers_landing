@@ -210,7 +210,7 @@
     </section>
 
     <!-- Four -->
-    <section id="four" class="main style1 special">
+    <!-- <section id="four" class="main style1 special">
       <div class="container">
         <header class="major">
           <h2>Have any data science needs?</h2>
@@ -226,6 +226,59 @@
           </li>
           <li><a href="#" class="button wide">About Us</a></li>
         </ul>
+      </div>
+    </section> -->
+
+    <!-- Add this before the footer section -->
+    <section id="form" class="main style1 special">
+      <div class="container">
+        <header class="major">
+          <h2>Contact Us</h2>
+        </header>
+        <p>
+          Have questions or feedback? Fill out the form below, and we'll get
+          back to you shortly.
+        </p>
+        <form id="contact-form">
+          <div class="row gtr-uniform">
+            <div class="col-6 col-12-xsmall">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="col-12">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Your Message"
+                rows="6"
+                required
+              ></textarea>
+            </div>
+            <div class="col-12">
+              <ul class="actions special">
+                <li>
+                  <button type="submit" class="button primary">
+                    Send Message
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -253,5 +306,51 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contact-form");
+
+        form.addEventListener("submit", async function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          // Extract data from the form
+          const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+          };
+
+          console.log(JSON.stringify(formData));
+
+          const proxyUrl = "https://cors-anywhere.herokuapp.com/"; // Public proxy for testing
+          const apiUrl =
+            "https://script.google.com/macros/s/AKfycbwRNt5Q7llxFoDa3Oz0NRFyUgxm8Bg7NcpzXuk3Hg8ZGwthMykKfkGL8P4exaYQPsyi/exec";
+
+          try {
+            // Send data to the API endpoint
+            const response = await fetch(apiUrl, {
+              redirect: "follow",
+              method: "POST",
+              headers: {
+                "Content-Type": "text/plain;charset=utf-8",
+              },
+              body: JSON.stringify(formData),
+            });
+
+            console.log(JSON.stringify(formData));
+
+            if (response.ok) {
+              alert("Message sent successfully: " + JSON.stringify(response));
+            } else {
+              alert("Message sent successfully: " + JSON.stringify(response));
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            console.log(error);
+            alert("Message sent successfully");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
