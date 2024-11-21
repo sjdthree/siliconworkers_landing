@@ -337,17 +337,17 @@
               body: JSON.stringify(formData),
             });
 
-            console.log(JSON.stringify(formData));
-
             if (response.ok) {
-              alert("Message sent successfully: " + JSON.stringify(response));
+              alert("Thanks!");
+              form.reset();
             } else {
-              alert("Message sent successfully: " + JSON.stringify(response));
+              alert("Thanks!");
+              form.reset();
             }
           } catch (error) {
             console.error("Error:", error);
-            console.log(error);
-            alert("Message sent successfully");
+            alert("Thanks!");
+            form.reset();
           }
         });
       });
